@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class BaseViewController: UIViewController{
     
     let button  = Button.sharedInstance.getButton()
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ class ViewController: UIViewController{
     
 }
 
-extension ViewController {
+extension BaseViewController {
     
     func setupButton() {
         button.setTitle("Get List", for: .normal)

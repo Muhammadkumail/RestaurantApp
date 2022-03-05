@@ -15,23 +15,8 @@ class RestaurantDetailsViewController: UIViewController {
     let hoursLabel = Label.sharedInstance.getLabel()
     let ratingLabel = Label.sharedInstance.getLabel()
     
-    let middleStackView: UIStackView = {
-        let sv = UIStackView()
-        sv.axis  = NSLayoutConstraint.Axis.horizontal
-        sv.alignment = UIStackView.Alignment.fill
-        sv.distribution = UIStackView.Distribution.fill
-        sv.translatesAutoresizingMaskIntoConstraints = false;
-        return sv
-    }()
-    
-    let bottomStackView: UIStackView = {
-        let sv = UIStackView()
-        sv.axis  = NSLayoutConstraint.Axis.horizontal
-        sv.alignment = UIStackView.Alignment.fill
-        sv.distribution = UIStackView.Distribution.fillEqually
-        sv.translatesAutoresizingMaskIntoConstraints = false;
-        return sv
-    }()
+    let middleStackView = StackView.sharedInstance.getStackView()
+    let bottomStackView = StackView.sharedInstance.getStackView()
 
     var restauarant: Restuarants?
     var viewModel: RestaurantDetailsViewModel?
@@ -51,6 +36,12 @@ class RestaurantDetailsViewController: UIViewController {
     func setupView() {
         addViews()
         setupLebels()
+        setupStacView()
+    }
+    
+    func setupStacView() {
+        middleStackView.alignment = UIStackView.Alignment.fill
+        middleStackView.distribution = UIStackView.Distribution.fill
     }
     
     func setupLebels() {
