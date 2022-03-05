@@ -18,8 +18,8 @@ class RestaurantDetailsViewController: UIViewController {
     let middleStackView: UIStackView = {
         let sv = UIStackView()
         sv.axis  = NSLayoutConstraint.Axis.horizontal
-        sv.alignment = UIStackView.Alignment.center
-        sv.distribution = UIStackView.Distribution.fillEqually
+        sv.alignment = UIStackView.Alignment.fill
+        sv.distribution = UIStackView.Distribution.fill
         sv.translatesAutoresizingMaskIntoConstraints = false;
         return sv
     }()
@@ -27,7 +27,7 @@ class RestaurantDetailsViewController: UIViewController {
     let bottomStackView: UIStackView = {
         let sv = UIStackView()
         sv.axis  = NSLayoutConstraint.Axis.horizontal
-        sv.alignment = UIStackView.Alignment.center
+        sv.alignment = UIStackView.Alignment.fill
         sv.distribution = UIStackView.Distribution.fillEqually
         sv.translatesAutoresizingMaskIntoConstraints = false;
         return sv
@@ -58,16 +58,23 @@ class RestaurantDetailsViewController: UIViewController {
         nameLabel.backgroundColor = .blue
         nameLabel.textColor = .white
         nameLabel.numberOfLines = 1
-       
+        nameLabel.textAlignment = .center
+        
         discriptionLabel.backgroundColor = .gray
         discriptionLabel.textColor = .white
         discriptionLabel.numberOfLines = 0
+        discriptionLabel.textAlignment = .center
         
         hoursLabel.backgroundColor = .orange
         hoursLabel.textColor = .white
+        hoursLabel.textAlignment = .center
         
         ratingLabel.backgroundColor = .red
         ratingLabel.textColor = .white
+        ratingLabel.textAlignment = .center
+        
+        //middleStackView.backgroundColor = .green
+        //bottomStackView.backgroundColor = .lightGray
     }
 }
 
@@ -98,12 +105,12 @@ extension RestaurantDetailsViewController {
         
         middleStackView.topAnchor.constraint(equalTo: restaurantImageView.bottomAnchor, constant: 0).isActive = true
         middleStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        middleStackView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        middleStackView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         middleStackView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         
         bottomStackView.topAnchor.constraint(equalTo: middleStackView.bottomAnchor, constant: 0).isActive = true
         bottomStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        bottomStackView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        bottomStackView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         bottomStackView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         
     }

@@ -1,9 +1,8 @@
 //
 //  Defaults.swift
-//  AmbitBox
+//  RestaurantsApp
 //
-//  Created by Ali Akber Motorwala on 19/03/2019.
-//  Copyright © 2019 AvanzaSolutions. All rights reserved.
+//  Created by Kumail kashefi on 05/03/2022.
 //
 
 import Foundation

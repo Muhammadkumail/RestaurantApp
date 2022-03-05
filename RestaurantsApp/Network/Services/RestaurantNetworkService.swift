@@ -1,9 +1,8 @@
 //
-//  RaastNetworkService.swift
-//  AmbitBox
+//  RestaurantNetworkService.swift
+//  RestaurantsApp
 //
-//  Created by Kumail kashefi on 16/07/2021.
-//  Copyright © 2021 AvanzaSolutions. All rights reserved.
+//  Created by Kumail kashefi on 05/03/2022.
 //
 
 import Foundation
