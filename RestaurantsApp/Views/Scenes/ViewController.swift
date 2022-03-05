@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController{
     
-    let button  = UIButton()
+    let button  = Button.sharedInstance.getButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -29,11 +29,11 @@ extension ViewController {
     
     func setupButton() {
         button.setTitle("Get List", for: .normal)
-        view.addSubview(button)
         button.backgroundColor = .lightGray
         button.setTitleColor(.black, for: .normal)
         button.frame = CGRect(x: 100, y: 100, width: 200, height: 50)
         button.addTarget(self, action: #selector(start), for: .touchUpInside)
+        view.addSubview(button)
     }
     
 }

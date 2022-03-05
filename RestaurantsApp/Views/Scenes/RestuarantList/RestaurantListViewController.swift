@@ -27,16 +27,11 @@ class RestaurantListViewController: UIViewController{
         self.title = "List"
         setupNavBar()
         setupCollectionView()
-        setupFilterButton()
     }
     
     func setupNavBar() {
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .orange
-        appearance.shadowImage = nil
-        appearance.backgroundImage = nil
-        self.navigationController?.navigationBar.standardAppearance = appearance;
-        self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
+        NavigationBar.sharedInstance.setupNavigationController(nav: self.navigationController)
+        setupFilterButton()
     }
     
     func setupFilterButton() {
@@ -49,16 +44,9 @@ class RestaurantListViewController: UIViewController{
     }
 
     func setupCollectionView() {
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width: view.frame.width, height: 500)
-        
-        collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionview = CollectionView.sharedInstance.getCollectionView(indetifier: cellId, view: self.view, cellSize: 500)
         collectionview.dataSource = self
         collectionview.delegate = self
-        collectionview.register(RestaurantListCell.self, forCellWithReuseIdentifier: cellId)
-        collectionview.showsVerticalScrollIndicator = false
-        collectionview.backgroundColor = UIColor.white
         self.view.addSubview(collectionview)
     }
 }

@@ -43,6 +43,12 @@
 		B5CA3CA227D2E108006D138D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568A35427D2851800727BC6 /* AppDelegate.swift */; };
 		B5CA3CA327D2E10A006D138D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B568A35627D2851800727BC6 /* SceneDelegate.swift */; };
 		B5CA3CA427D2E10F006D138D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B568A35A27D2851800727BC6 /* Main.storyboard */; };
+		B5CA3CA727D352B6006D138D /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA3CA627D352B6006D138D /* Label.swift */; };
+		B5CA3CA927D35404006D138D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA3CA827D35404006D138D /* Button.swift */; };
+		B5CA3CAB27D354C4006D138D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA3CAA27D354C4006D138D /* Image.swift */; };
+		B5CA3CAD27D35537006D138D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA3CAC27D35537006D138D /* View.swift */; };
+		B5CA3CAF27D364D1006D138D /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA3CAE27D364D0006D138D /* CollectionView.swift */; };
+		B5CA3CB127D37145006D138D /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA3CB027D37144006D138D /* NavigationBar.swift */; };
 		DB36949CB62887C6CA53EAFD /* Pods_RestaurantsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F60AFF5C9F5FFA8B108DC8EA /* Pods_RestaurantsApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +88,12 @@
 		B5CA3C8427D2D480006D138D /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		B5CA3C8C27D2E03D006D138D /* RestaurantsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CA3C8E27D2E03D006D138D /* RestaurantsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsAppTests.swift; sourceTree = "<group>"; };
+		B5CA3CA627D352B6006D138D /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		B5CA3CA827D35404006D138D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		B5CA3CAA27D354C4006D138D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		B5CA3CAC27D35537006D138D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		B5CA3CAE27D364D0006D138D /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		B5CA3CB027D37144006D138D /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		BDB2888B21BFE0868078B9D9 /* Pods-RestaurantsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantsApp.release.xcconfig"; path = "Target Support Files/Pods-RestaurantsApp/Pods-RestaurantsApp.release.xcconfig"; sourceTree = "<group>"; };
 		BE7171A1FD476666BB3FA9B0 /* Pods-RestaurantsAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantsAppTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantsAppTests/Pods-RestaurantsAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		F60AFF5C9F5FFA8B108DC8EA /* Pods_RestaurantsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				B5CA3C7527D29294006D138D /* Scenes */,
+				B5CA3CA527D3527B006D138D /* UIComponents */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +279,19 @@
 				B5CA3C8E27D2E03D006D138D /* RestaurantsAppTests.swift */,
 			);
 			path = RestaurantsAppTests;
+			sourceTree = "<group>";
+		};
+		B5CA3CA527D3527B006D138D /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B5CA3CA627D352B6006D138D /* Label.swift */,
+				B5CA3CA827D35404006D138D /* Button.swift */,
+				B5CA3CAA27D354C4006D138D /* Image.swift */,
+				B5CA3CAC27D35537006D138D /* View.swift */,
+				B5CA3CAE27D364D0006D138D /* CollectionView.swift */,
+				B5CA3CB027D37144006D138D /* NavigationBar.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		D8FEEE0563C2C4E4ED63596D /* Frameworks */ = {
@@ -465,12 +491,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CA3C7827D299CB006D138D /* RestaurantListCell.swift in Sources */,
+				B5CA3CAB27D354C4006D138D /* Image.swift in Sources */,
 				B5CA3C7327D29190006D138D /* RestaurantNetworkService.swift in Sources */,
 				B568A36E27D2860C00727BC6 /* Restuarants.swift in Sources */,
 				B568A39E27D2901B00727BC6 /* RestaurantInteractor.swift in Sources */,
 				B5CA3C8327D2D43F006D138D /* RestaurantDetailsViewModel.swift in Sources */,
+				B5CA3CAF27D364D1006D138D /* CollectionView.swift in Sources */,
+				B5CA3CAD27D35537006D138D /* View.swift in Sources */,
 				B5CA3C7A27D2A207006D138D /* RestaurantListViewController.swift in Sources */,
+				B5CA3CA727D352B6006D138D /* Label.swift in Sources */,
 				B5CA3C8127D2D3F6006D138D /* RestaurantDetailsViewController.swift in Sources */,
+				B5CA3CB127D37145006D138D /* NavigationBar.swift in Sources */,
 				B568A39227D2891500727BC6 /* URLConstant.swift in Sources */,
 				B568A35927D2851800727BC6 /* ViewController.swift in Sources */,
 				B568A37627D2867100727BC6 /* RequestManager.swift in Sources */,
@@ -479,6 +510,7 @@
 				B568A35727D2851800727BC6 /* SceneDelegate.swift in Sources */,
 				B5CA3C7E27D2B7D5006D138D /* RestaurantViewModel.swift in Sources */,
 				B568A39427D2899B00727BC6 /* Defaults.swift in Sources */,
+				B5CA3CA927D35404006D138D /* Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
