@@ -16,13 +16,14 @@ class ViewController: UIViewController{
     }
     
     func setupViews()  {
-       setupButton()
+        self.view.backgroundColor = .white
+        setupButton()
     }
     
     @objc func start() {
         Navigator.sharedInstance.navigateToRestaurantList(self)
     }
-
+    
 }
 
 extension ViewController {
